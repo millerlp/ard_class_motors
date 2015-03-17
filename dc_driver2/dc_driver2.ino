@@ -6,7 +6,7 @@
 	Source pin of MOSFET to GND
 	Supply +12V to one lead of motor
 	Place 1N4001 diode between +12V and GND lead of motor
-	
+	http://bildr.org/2012/03/rfp30n06le-arduino/
 */
 
 
