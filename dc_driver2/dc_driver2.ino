@@ -11,24 +11,26 @@
 
 
 #define M1PWM 9 // Motor 1 pulse width modulation pin 9
+byte myspeed = 0;
 
 void setup()
 {
      Serial.begin(9600);
      Serial.print("Enter value from 0 to 255");
-     Serial.println("to adjust motor speed.");
+     Serial.println(" to adjust motor speed.");
 	pinMode(M1PWM, OUTPUT); // Motor1 PWM
 	
 }
 
 void loop()
 {
+    
     if (Serial.available() > 0) {
-      byte speed = Serial.read(); 
+      myspeed = Serial.read(); 
       Serial.print("New speed: ");
-      Serial.println(speed);
+      Serial.println(myspeed);
     }
-    analogWrite(M1PWM, speed);
+    analogWrite(M1PWM, myspeed);
     delay(100);
 
 }
