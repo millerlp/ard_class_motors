@@ -1,5 +1,12 @@
 /*
-
+	Run a DC motor with a N-channel MOSFET
+	
+	Arduino pin D9 to gate pin of MOSFET
+	Drain pin of MOSFET to DC motor lead
+	Source pin of MOSFET to GND
+	Supply +12V to one lead of motor
+	Place 1N4001 diode between +12V and GND lead of motor
+	
 */
 
 
